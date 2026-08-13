@@ -1,0 +1,5 @@
+# dsh-research-loop bundle patch: mounts the plugin into a profile layer stack.
+- insert:
+    - id: dsh-research-loop
+      name: dsh-research-loop
+      config: {}

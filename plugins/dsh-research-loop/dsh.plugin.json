@@ -1,0 +1,13 @@
+{
+  "id": "dsh-research-loop",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "description": "Durable per-topic research log (append-only JSONL) plus a skill-driven plan → search → read → synthesize loop with explicit stop conditions.",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": ["research_log"],
+    "skills": ["auto-research-loop"]
+  }
+}

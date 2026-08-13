@@ -1,0 +1,13 @@
+{
+  "id": "dsh-code-review",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "description": "Deterministic git-diff context collection plus a skill-driven review checklist (correctness, security, tests, style).",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": ["code_review_context"],
+    "skills": ["code-review"]
+  }
+}

@@ -1,0 +1,5 @@
+# dsh-code-review bundle patch: mounts the plugin into a profile layer stack.
+- insert:
+    - id: dsh-code-review
+      name: dsh-code-review
+      config: {}
