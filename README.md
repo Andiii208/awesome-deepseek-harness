@@ -63,6 +63,16 @@ _DeepSeek-native or DeepSeek-first agent harnesses / coding agents, plus runtime
 - [didclawapp-ai/zagens](https://github.com/didclawapp-ai/zagens) — Open-source agent harness for DeepSeek V4.
 - [liubf21/ds-forge](https://github.com/liubf21/ds-forge) — Lightweight agent harness for DeepSeek V4.
 - [Owen718/FlashCoder](https://github.com/Owen718/FlashCoder) — Simple harness for DeepSeek models.
+- [ArtificialNotImbecile/dsh-context-taxonomy](https://github.com/ArtificialNotImbecile/dsh-context-taxonomy) — Logical-call context taxonomy plugin for DeepSeek Harness.
+- [btspoony/dsh-llm-fallbacks](https://github.com/btspoony/dsh-llm-fallbacks) — Role-based LLM retry and fallback strategy plugin.
+- [Drifter-yh/dsh-tool-policy](https://github.com/Drifter-yh/dsh-tool-policy) — Declarative deny-by-default tool policy plugin.
+- [LingLambda/dsh-undo](https://github.com/LingLambda/dsh-undo) — Context undo/redo: roll the model context back to the last completed step and restore it again.
+- [omdsh-dev/omdsh](https://github.com/omdsh-dev/omdsh) — Community experiment for organizing versioned DSH component sets and defaults in a reviewable, reproducible form.
+- [omdsh-dev/omdsh-runtime](https://github.com/omdsh-dev/omdsh-runtime) — Headless execution layer reusing official Profile/Bundle/Cordis operations, adding deterministic plan/apply, candidate generations, and previous-generation recovery.
+- [wangshunnn/oh-my-dsh](https://github.com/wangshunnn/oh-my-dsh) — A collection of DeepSeek Harness plugins.
+- [yjh051108/dsh-super-injector](https://github.com/yjh051108/dsh-super-injector) — BepInEx-style mod injector: hot-injects local plugin packages into a running DSH web instance without patches or restarts.
+- [yoke233/dsh-openai-codex-auth](https://github.com/yoke233/dsh-openai-codex-auth) — OpenAI Codex OAuth login and usage card plugin.
+- [YYTbit/dsh-plugin-claude-bridge](https://github.com/YYTbit/dsh-plugin-claude-bridge) — Bridges Claude Code memory, skills, and config into DeepSeek Harness.
 
 ## Visualization
 
@@ -72,6 +82,9 @@ _Plugins that turn data / results into charts, diagrams, dashboards._
 - [Anionex/dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) — Vision tasks for text-only models: intent-driven image Q&A, long-screenshot OCR, UI restoration, pixel diff.
 - [william-jin-cmu/dsh-vision](https://github.com/william-jin-cmu/dsh-vision) — `view_image` tool bridging any OpenAI-compatible VLM to text-only models.
 - [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) — Interactive UI components rendered inline in assistant replies via a `dsh-ui` fence — layout, charts, plots, forms, quizzes, mermaid, 3D scenes — with an action event loop back to the model.
+- [omdsh-dev/dsh-ernie-image](https://github.com/omdsh-dev/dsh-ernie-image) — Baidu ERNIE-Image-Turbo text-to-image: a host-side generation tool plus a browser gallery panel and config card.
+- [omdsh-dev/dsh-paddle-ocr](https://github.com/omdsh-dev/dsh-paddle-ocr) — PaddleOCR-VL document layout parsing: converts PDFs/images to Markdown page by page, with host tools, a config card, and a task panel.
+- [PangYiMing/dsh-screenshot-diff](https://github.com/PangYiMing/dsh-screenshot-diff) — Pixel-diffs two screenshots into a diff image and triptych (pixelmatch).
 
 ## Slides / PPT
 
@@ -88,6 +101,11 @@ _Code generation, refactoring, review, repo-level engineering plugins._
 - [CanglongCl/dsh-web-review](https://github.com/CanglongCl/dsh-web-review) — Web preview and element annotation for the DSH Web GUI, letting the AI edit front-end source code from visual feedback.
 - [omdsh-dev/dsh-plugin-check](https://github.com/omdsh-dev/dsh-plugin-check) — Plugin health check: scans plugin repos for manifest protocol, patch format, build pitfalls, and hub listing status; zero-dependency, read-only, registers a `plugin_check` tool.
 - [omdsh-dev/plugin-template](https://github.com/omdsh-dev/plugin-template) — Plugin template repository based on the official turtle-ui plugin repo.
+- [a179-sanae/dsh-code-check](https://github.com/a179-sanae/dsh-code-check) — Auto type-check diagnostics: runs `tsc --noEmit` in the background after code edits and exposes a `code_check` tool.
+- [FlashingChen/dsh-worktree](https://github.com/FlashingChen/dsh-worktree) — Codex-style permanent git worktrees: create/list/remove agent tools, a `/worktree` chat command, and durable per-repo manifests.
+- [PangYiMing/dsh-batch-regression](https://github.com/PangYiMing/dsh-batch-regression) — Runs a command N rounds and judges by median/distribution for statistical regression conclusions.
+- [PangYiMing/dsh-bisect-debug](https://github.com/PangYiMing/dsh-bisect-debug) — Bisects bugs by code, boundary, or commit to locate root causes.
+- [PangYiMing/dsh-port-guard](https://github.com/PangYiMing/dsh-port-guard) — Triage for port conflicts: reuse, switch, or precisely kill the occupying process.
 
 ## Agents
 
@@ -98,6 +116,16 @@ _Reusable sub-agents / specialized agent packs runnable inside DSH._
 - [omdsh-dev/dsh-data-agent](https://github.com/omdsh-dev/dsh-data-agent) — Lets the agent connect to databases and write SQL for you.
 - [omdsh-dev/dsh-mnemon](https://github.com/omdsh-dev/dsh-mnemon) — Deep Mnemon integration providing a three-layer local memory: runtime memory, retrievable documents, and supervised memory spaces.
 - [nowledge-co/nowledge-mem-deepseek-harness](https://github.com/nowledge-co/nowledge-mem-deepseek-harness) — Nowledge Mem community plugin bundle for DeepSeek Harness.
+- [btspoony/dsh-advisor](https://github.com/btspoony/dsh-advisor) — Pairs a second model that passively reviews each turn and injects notes.
+- [fakechris/dsh-track](https://github.com/fakechris/dsh-track) — Embedded task-management engine: decision-point protocol, idea-capture wall, and Linear-style issue storage shared between AI and humans.
+- [Fisfzy/ego-browser](https://github.com/Fisfzy/ego-browser) — Plugs the ego-lite agent browser (Chromium) into DSH with 13 structured `ego_*` tools: semantic text snapshots, semantic-locator clicks, form filling, screenshots, and CDP control.
+- [omdsh-dev/dsh-longbridge](https://github.com/omdsh-dev/dsh-longbridge) — Longbridge OpenAPI integration for HK/US stocks: quotes, account, and trading tools with credential management in settings.
+- [omdsh-dev/dsh-tool-browser](https://github.com/omdsh-dev/dsh-tool-browser) — Static Cordis overlay and integration guide for the official `dsh-tool-browser` browser-control tool.
+- [PangYiMing/dsh-browser-control](https://github.com/PangYiMing/dsh-browser-control) — Browser-control plugin (CDP/Playwright).
+- [PangYiMing/dsh-mobile-control](https://github.com/PangYiMing/dsh-mobile-control) — Mobile-device control plugin (ADB/iOS).
+- [titanwings/dsh-better-browser](https://github.com/titanwings/dsh-better-browser) — Lets agents drive the user's signed-in browser through thirteen Kimi WebBridge tools.
+- [UynajGI/dsh-ssh](https://github.com/UynajGI/dsh-ssh) — SSH remote-execution plugin: ProxyJump chains, SFTP filesystem, subprocess and PTY over ssh2.
+- [whiteguo233/OpenBiliClaw](https://github.com/whiteguo233/OpenBiliClaw) — Local-first cross-platform content-discovery agent (Bilibili, Xiaohongshu, YouTube, X, etc.) that ships a DSH client plugin.
 
 ## Loops (Auto-Research, Self-Improve, etc.)
 
@@ -107,12 +135,16 @@ _Long-running loop workflows: auto-research, deep-research, self-refine, iterati
 - [csyangwen/dsh-memory-evolve](https://github.com/csyangwen/dsh-memory-evolve) — Plugin-only cross-session long-term memory with background self-evolution: five memory tracks, in-turn self-review, skill self-evolution and a skill manager, todo tracks, and session search — zero core modifications.
 - [vlln/dsh-loop](https://github.com/vlln/dsh-loop) — Timed loop plugin (`/loop` command + loop tool + activity status bar).
 - [william-jin-cmu/dsh-evolve](https://github.com/william-jin-cmu/dsh-evolve) — Self-evolving plugin: hot-mount/unmount Cordis plugins inside a session.
+- [fuhefei/dsh-sentinel](https://github.com/fuhefei/dsh-sentinel) — Condition-driven wakeup: durable file/command/HTTP/process/webhook watches that wake the agent, with a dock and a global dashboard.
+- [lzszq/dsh-scholar](https://github.com/lzszq/dsh-scholar) — AI research workbench for computational research: materials, project conversations, code and data, experiment runs, an evidence ledger, and TeX manuscripts in one recoverable project.
+- [omdsh-dev/dsh-revive](https://github.com/omdsh-dev/dsh-revive) — One-click revive: automatically sends "continue" to all interrupted sessions after a restart (`/revive` command, tool, and browser button).
 
 ## MCP Servers
 
 _Model Context Protocol servers that contribute tools / prompts / resources to DSH._
 
 <!-- Add entries here. -->
+- [taxueseek/argo](https://github.com/taxueseek/argo) — Multilingual agent-facing search tool (web, academic, code, finance, news) that ships a DSH plugin bundle exposing ten `mcp__argo__*` tools.
 
 ## Orchestrators & Aggregators
 
@@ -123,6 +155,7 @@ _Multi-step / multi-agent schedulers and output aggregators._
 - [Chinesezjc/dsh-interconnect](https://github.com/Chinesezjc/dsh-interconnect) — Cross-instance message/event handoff plugins for DSH (interconnect service + tools).
 - [titanwings/dsh-automation](https://github.com/titanwings/dsh-automation) — Runs coding tasks on a schedule in fresh agent sessions; schedules are managed from the DSH Web UI or by the agent itself.
 - [Buyi-wsgzg/dsh-sidechain](https://github.com/Buyi-wsgzg/dsh-sidechain) — Side sessions: persistent `/side` sessions (Codex-style) and one-shot `/btw` questions (Claude-style) that run in a temporary fork without touching main-session history, with an embedded side panel.
+- [omdsh-dev/dsh-hub-workshop](https://github.com/omdsh-dev/dsh-hub-workshop) — Public catalog, review projection, and immutable feed authority for the OMDSH ecosystem.
 
 ## UI / Clients
 
@@ -159,6 +192,38 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 - [vlln/whale-girl](https://github.com/vlln/whale-girl) — Desktop-pet plugin for the Web GUI (QQ-pet style): a draggable floating companion you can feed and play with.
 - [ccch1mneyyy/dsh-working-activity](https://github.com/ccch1mneyyy/dsh-working-activity) — Live model working-status line for the TUI prompt bar and Web UI: playful thinking copy, running tools, turn summaries, and self-narration.
 - [orriduck/dsh-tui](https://github.com/orriduck/dsh-tui) — A small, session-aware terminal UI for DeepSeek Harness.
+- [bill9109/dsh-conversation-share](https://github.com/bill9109/dsh-conversation-share) — Share arbitrary segments of a DSH conversation.
+- [bruc3van/dsh-desktop](https://github.com/bruc3van/dsh-desktop) — Standalone Electron desktop client wrapping the official Web UI, with session sharing, local workspaces, remote connections, and a system tray.
+- [chen-001/dsh-chat-width](https://github.com/chen-001/dsh-chat-width) — Adjusts the width of DSH replies.
+- [dingyi222666/dsh-session-notification](https://github.com/dingyi222666/dsh-session-notification) — Notifications for four session states (completion etc.), via browser alerts or prompt injection.
+- [hellodigua/dsh-emoji](https://github.com/hellodigua/dsh-emoji) — Automatically adds emoji to AI replies.
+- [icodesign/orbis](https://github.com/icodesign/orbis) — Mobile client for DeepSeek Harness remote control.
+- [lhh010/dsh-input-history](https://github.com/lhh010/dsh-input-history) — Terminal-style input history for the Web UI: recall sent messages with Ctrl+Up/Ctrl+Down; zero core changes.
+- [lhh010/dsh-minigames](https://github.com/lhh010/dsh-minigames) — Right-side panel with 18 offline minigames (Tetris, Minesweeper, 2048, Sudoku, etc.) and an extensible game registry.
+- [lhh010/dsh-paste-input](https://github.com/lhh010/dsh-paste-input) — File-input enhancements for the Web UI: Ctrl+V paste, drag-and-drop, and file picking, copied into the session workspace on send.
+- [Moeblack/deepseek-manners](https://github.com/Moeblack/deepseek-manners) — Injects a thank-you note after every message.
+- [Moeblack/dsh-prompt-studio](https://github.com/Moeblack/dsh-prompt-studio) — Prompt Studio: edit user and built-in system-prompt sections with live preview.
+- [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) — Imports Claude Code chat history so conversations can continue in DSH.
+- [omdsh-dev/7d7d](https://github.com/omdsh-dev/7d7d) — 7k7k-style game portal: the model generates or uploads HTML5/Flash minigames playable in the Web UI (fixed-version, checksum-verified Ruffle for Flash).
+- [omdsh-dev/dsh-auto-chess](https://github.com/omdsh-dev/dsh-auto-chess) — Auto-chess in the DSH Web UI: play against the AI or watch two AIs battle.
+- [omdsh-dev/dsh-daily-fortune](https://github.com/omdsh-dev/dsh-daily-fortune) — Daily fortune plugin with Guan Yin lots, Tarot spreads, and daily quotes.
+- [omdsh-dev/dsh-daily-progress](https://github.com/omdsh-dev/dsh-daily-progress) — Daily plan and achievement system with completion-rate, streak, and weekly metrics.
+- [omdsh-dev/dsh-fun-ticker](https://github.com/omdsh-dev/dsh-fun-ticker) — Market ticker marquee for crypto, FX, A-shares, indices, and HK/US stocks, using keyless data sources with a host proxy and caching.
+- [omdsh-dev/dsh-fun-typewriter](https://github.com/omdsh-dev/dsh-fun-typewriter) — WebAudio typing ambience with a plugin-owned settings API and zero audio assets.
+- [omdsh-dev/dsh-fun-weather](https://github.com/omdsh-dev/dsh-fun-weather) — Weather tab and weather-following themes powered by Open-Meteo.
+- [omdsh-dev/dsh-gomoku](https://github.com/omdsh-dev/dsh-gomoku) — Play Gomoku against the AI in DSH, or pit two AIs against each other.
+- [omdsh-dev/dsh-pet-corner](https://github.com/omdsh-dev/dsh-pet-corner) — Floating pet with a keyless pet-image proxy, favorites, and a plugin-owned settings API.
+- [omdsh-dev/dsh-voice-funasr](https://github.com/omdsh-dev/dsh-voice-funasr) — Local offline voice input for the Web UI: push-to-talk transcription with a local FunASR engine and optional LLM polish.
+- [omdsh-dev/toybox](https://github.com/omdsh-dev/toybox) — Toybox of playful DSH plugins: fun skills, quirky MCP servers, and other just-for-fun experiments.
+- [qyw233/dsh-deeplink](https://github.com/qyw233/dsh-deeplink) — Deep links for the Web UI: open a given session or workspace directly via `?session=`/`?workspace=`.
+- [renat3u/tonghuashun-webui](https://github.com/renat3u/tonghuashun-webui) — Tonghuashun-style (stock-terminal) Web UI skin plugin.
+- [SenmuuuuW/dsh-group-photo](https://github.com/SenmuuuuW/dsh-group-photo) — Beta-farewell photo wall: a Polaroid-style group-photo site with zero-permission GitHub OAuth and an allowlist check, wrapped as a DSH skill.
+- [Small-tailqwq/dsh-tps](https://github.com/Small-tailqwq/dsh-tps) — A simple TPS (tokens-per-second) plugin.
+- [SnowCrescenter-tech/dsh-launcher](https://github.com/SnowCrescenter-tech/dsh-launcher) — One-click portable Windows launcher (no Node.js, pnpm, or CLI required).
+- [vlln/dsh-navbar](https://github.com/vlln/dsh-navbar) — Conversation node navigation bar: jump between user messages from a right-edge node strip.
+- [vlln/dsh-task-status](https://github.com/vlln/dsh-task-status) — Background task status bar with task progress and live output tail on the conversation page.
+- [yuezengwu/dsh-explain](https://github.com/yuezengwu/dsh-explain) — Local-first learning mode: cross-session global learning threads, per-source explanations, and a diagnosable settings UI.
+- [yuxino/dsh-blue-whale-maid](https://github.com/yuxino/dsh-blue-whale-maid) — Blue-whale-maid desktop pixel pet living in the DSH Web GUI.
 
 ## Skills
 
@@ -171,6 +236,17 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 - [omdsh-dev/dsh-tool-csv](https://github.com/omdsh-dev/dsh-tool-csv) — CSV data tool (RFC 4180): parse, query, aggregate, and convert CSV text with a zero-dependency state-machine parser.
 - [emredeveloper/deepseek-harness-huggingface](https://github.com/emredeveloper/deepseek-harness-huggingface) — Read-only Hugging Face Hub model discovery; registers an `hf_search_models` tool that needs no API key.
 - [omdsh-dev/dsh-plugin-skills](https://github.com/omdsh-dev/dsh-plugin-skills) — Agent skills for building and testing DSH plugins — from scaffolding a new package to choosing test tiers — entirely inside an agent session.
+- [omdsh-dev/dsh-book2skill](https://github.com/omdsh-dev/dsh-book2skill) — Book-to-skill pipeline: a five-stage long task (fetch, parse, understand, generate, install) with three human gates and a browser timeline panel.
+- [omdsh-dev/dsh-github-integration](https://github.com/omdsh-dev/dsh-github-integration) — Static skill source for structured GitHub issue and pull-request campaigns: batch survey, triage, isolated fixes, and tracking-table updates.
+- [omdsh-dev/dsh-tool-calculator](https://github.com/omdsh-dev/dsh-tool-calculator) — Calculator tool: safe math-expression evaluator with a zero-dependency recursive-descent parser.
+- [omdsh-dev/dsh-tool-diff](https://github.com/omdsh-dev/dsh-tool-diff) — Diff tool: structured comparison and unified diffs for text, JSON, CSV, and Markdown; zero-dependency and read-only.
+- [omdsh-dev/dsh-tool-encoding](https://github.com/omdsh-dev/dsh-tool-encoding) — Encoding/hash tool: base64/base64url/url/hex codecs, md5/sha1/sha256/sha512 hashes, and UUID generation; zero-dependency.
+- [omdsh-dev/dsh-tool-json](https://github.com/omdsh-dev/dsh-tool-json) — JSON query tool: JMESPath-subset queries with a zero-dependency recursive-descent parser.
+- [omdsh-dev/dsh-tool-markdown](https://github.com/omdsh-dev/dsh-tool-markdown) — Markdown tool: HTML-Markdown conversion, GFM table normalization, and TOC generation with a lightweight parser.
+- [omdsh-dev/dsh-tool-regex](https://github.com/omdsh-dev/dsh-tool-regex) — Regex tool: test matches, extract capture groups, replace safely, and statically explain patterns without executing code.
+- [omdsh-dev/dsh-tool-schema](https://github.com/omdsh-dev/dsh-tool-schema) — JSON Schema validation tool: validate/paths/explain/normalize with zero network access and no dynamic execution.
+- [omdsh-dev/dsh-tool-stat](https://github.com/omdsh-dev/dsh-tool-stat) — Statistics tool: descriptive stats, percentiles, frequency distributions, and correlations; zero-dependency pure functions.
+- [omdsh-dev/dsh-tool-time](https://github.com/omdsh-dev/dsh-tool-time) — Time tool: strict ISO 8601 parsing, IANA timezone conversion, UTC calendar math, and fixed-duration differences; zero-dependency.
 
 ## Resources
 
