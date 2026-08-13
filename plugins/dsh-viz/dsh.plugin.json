@@ -1,0 +1,13 @@
+{
+  "id": "dsh-viz",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "description": "Render charts (line/bar/pie/scatter) from structured data into self-contained ECharts HTML artifacts in the workspace.",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": ["chart_render"],
+    "skills": []
+  }
+}

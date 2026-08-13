@@ -1,0 +1,7 @@
+# dsh-viz bundle patch: mounts the plugin into a profile layer stack.
+# Users override runtime defaults on their own profile patch row with the
+# same id (see README "Configuration").
+- insert:
+    - id: dsh-viz
+      name: dsh-viz
+      config: {}

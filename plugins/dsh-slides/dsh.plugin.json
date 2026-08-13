@@ -1,0 +1,13 @@
+{
+  "id": "dsh-slides",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "description": "Generate reveal.js HTML slide decks from markdown outlines, written into the active workspace.",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": ["slides_generate"],
+    "skills": []
+  }
+}

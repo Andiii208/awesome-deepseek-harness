@@ -1,0 +1,5 @@
+# dsh-slides bundle patch: mounts the plugin into a profile layer stack.
+- insert:
+    - id: dsh-slides
+      name: dsh-slides
+      config: {}
