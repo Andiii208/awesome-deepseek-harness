@@ -14,6 +14,20 @@ DeepSeek Harness（简称 "DSH"）是 DeepSeek 的 agent 运行框架 / harness 
 
 > **给作者的提示：** DeepSeek 要求插件仓库带上 **`#dsh`** GitHub topic 以便被发现。给你的仓库加上它，然后来这里提 PR。
 
+![DeepSeek Harness 生态地图](./assets/dsh-ecosystem.svg)
+
+## 快速开始
+
+```bash
+# 启动 DSH Web UI
+npx @deepseek-ai/dsh web
+
+# 把清单中的社区插件安装到指定 profile
+dsh plugin --profile web add "github:owner/repo#main"
+```
+
+安装前请确认目标仓库带有 **`#dsh`** GitHub topic，便于社区 hub 收录。
+
 ## 目录
 
 - [官方](#官方)
@@ -34,7 +48,7 @@ DeepSeek Harness（简称 "DSH"）是 DeepSeek 的 agent 运行框架 / harness 
 
 ## 官方
 
-- [DeepSeek Harness](https://ai-bot.cn/deepseek-harness) —— DeepSeek 官方 agent 运行框架（`Model + Harness = Agent`），主攻编程与办公场景。
+- [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) —— DeepSeek 官方 agent 运行框架（`Model + Harness = Agent`），基于 Cordis 的"一切皆插件"架构（TypeScript，MIT）。
 - [deepseek-ai/awesome-deepseek-integration](https://github.com/deepseek-ai/awesome-deepseek-integration) —— 官方 DeepSeek API 集成清单。
 - [deepseek-ai/awesome-deepseek-agent](https://github.com/deepseek-ai/awesome-deepseek-agent) —— 官方支持 DeepSeek 的 agent / harness 清单。
 
@@ -249,7 +263,8 @@ _打包好的任务能力（基于 markdown 的 skill、工具包）。_
 
 ## 资源
 
-- [DeepSeek Harness 概览（ai-bot.cn）](https://ai-bot.cn/deepseek-harness)
+- [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) —— 官方源码仓库。
+- [DeepSeek Harness 概览（ai-bot.cn）](https://ai-bot.cn/deepseek-harness) —— 第三方解读。
 
 ## 贡献指南
 

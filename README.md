@@ -14,6 +14,20 @@ This list collects the best of that ecosystem. Contributions welcome — see [Co
 
 > **Tip for authors:** DeepSeek asks plugin repositories to carry the **`#dsh`** GitHub topic so they can be discovered. Add it to your repo, then open a PR here.
 
+![DeepSeek Harness ecosystem map](./assets/dsh-ecosystem.svg)
+
+## Quick Start
+
+```bash
+# Launch the DSH Web UI
+npx @deepseek-ai/dsh web
+
+# Install a community plugin (from this list) into your profile
+dsh plugin --profile web add "github:owner/repo#main"
+```
+
+Before installing, confirm the target repo carries the **`#dsh`** GitHub topic so the community hub can index it.
+
 ## Contents
 
 - [Official](#official)
