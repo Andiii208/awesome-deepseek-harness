@@ -457,7 +457,8 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 _Packaged task capabilities (markdown-based skills, tool packs)._
 
 - [Anionex/dsh-vision-toolkit](https://github.com/Anionex/dsh-vision-toolkit) — Vision tools for text-only models: intent-aware image Q&A, long-screenshot OCR, UI restoration, grounding, pixel diff, artifacts, and a Web UI.  `⭐150`
-- [omdsh-dev/dsh-toolkit](https://github.com/omdsh-dev/dsh-toolkit) — Zero-dependency deterministic tool pack — time, encoding, JSON, calculator, CSV, regex, markdown, diff, stats, and schema — with a unified one-command install.  `⭐10`
+- [omdsh-dev/dsh-toolkit](https://github.com/omdsh-dev/dsh-toolkit)
+- [Blaczz/dsh-sci](https://github.com/Blaczz/dsh-sci) — Zero-dependency scientific computing tools: physical-unit conversion, CODATA physical constants, and Runge-Kutta ODE/dynamical-system simulation. — Zero-dependency deterministic tool pack — time, encoding, JSON, calculator, CSV, regex, markdown, diff, stats, and schema — with a unified one-command install.  `⭐10`
 - [Anionex/dsh-computer-use](https://github.com/Anionex/dsh-computer-use) — Accessibility-first macOS computer-use bundle with fresh observations, stale-state rejection, scoped permissions, and safe input.  `⭐12`
 - [omdsh-dev/dsh-plugin-dev](https://github.com/omdsh-dev/dsh-plugin-dev) — Field notes on DSH plugin development (skill + docs): cordis dual copies, tsconfig setup, Windows junctions, multi-frame zstd, and other tested findings.
 - [omdsh-dev/dsh-tool-csv](https://github.com/omdsh-dev/dsh-tool-csv) — CSV data tool (RFC 4180): parse, query, aggregate, and convert CSV text with a zero-dependency state-machine parser.
