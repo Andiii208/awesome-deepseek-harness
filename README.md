@@ -396,8 +396,8 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 - [SenmuuuuW/dsh-group-photo](https://github.com/SenmuuuuW/dsh-group-photo) — Beta-farewell photo wall: a Polaroid-style group-photo site with zero-permission GitHub OAuth and an allowlist check, wrapped as a DSH skill.  `⭐12`
 - [Small-tailqwq/dsh-tps](https://github.com/Small-tailqwq/dsh-tps) — A simple TPS (tokens-per-second) plugin.
 - [SnowCrescenter-tech/dsh-launcher](https://github.com/SnowCrescenter-tech/dsh-launcher) — One-click portable Windows launcher (no Node.js, pnpm, or CLI required).
-- [vlln/dsh-navbar](https://github.com/vlln/dsh-navbar)
-- [Blaczz/dsh-turn-dots](https://github.com/Blaczz/dsh-turn-dots) — Codex-style conversation turn rail: one dot per user turn on the left edge, hover to enlarge and preview, click to jump, with a scroll-spy active marker. — Conversation node navigation bar: jump between user messages from a right-edge node strip.
+- [vlln/dsh-navbar](https://github.com/vlln/dsh-navbar) — Conversation node navigation bar: jump between user messages from a right-edge node strip.
+- [Blaczz/dsh-turn-dots](https://github.com/Blaczz/dsh-turn-dots) — Codex-style conversation turn rail: one dot per user turn on the left edge, hover to enlarge and preview, click to jump, with a scroll-spy active marker.
 - [vlln/dsh-task-status](https://github.com/vlln/dsh-task-status) — Background task status bar with task progress and live output tail on the conversation page.
 - [yuezengwu/dsh-explain](https://github.com/yuezengwu/dsh-explain) — Local-first learning mode: cross-session global learning threads, per-source explanations, and a diagnosable settings UI.
 - [yuxino/dsh-blue-whale-maid](https://github.com/yuxino/dsh-blue-whale-maid) — Blue-whale-maid desktop pixel pet living in the DSH Web GUI.
