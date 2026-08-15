@@ -265,6 +265,7 @@ _Bridges DSH into chat platforms and messaging channels._
 - [MoonGlassKitty/dsh-tailscale-sync](https://github.com/MoonGlassKitty/dsh-tailscale-sync) — Zero-config Tailscale sync for DeepSeek Harness: keep working on your phone from where you left off on desktop.
 
 ## Plugin Marketplaces & Ecosystem
+- [dhicoc/dsh-reverse-skill](https://github.com/dhicoc/dsh-reverse-skill) - Complete reverse-skill pack (85 SKILL.md) as a DeepSeek Harness Cordis plugin: reverse engineering, authorized pentesting and security-research skill router.
 
 _Plugin marketplaces, install managers, indexes, and ecosystem tooling._
 
