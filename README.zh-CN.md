@@ -1550,6 +1550,7 @@ _DSH 的桌面、网页、终端或编辑器前端。_
 - [rongyishuaige7/dsh-stats](https://github.com/rongyishuaige7/dsh-stats) — DeepSeek Harness (DSH) 插件：项目级 Token 消耗、开发时间线与消费金额统计面板。
 - [xccpddym/dsh-bubble-nav](https://github.com/xccpddym/dsh-bubble-nav) — DSH（DeepSeek Harness）泡泡导航：可拖拽的加速球，列出你的所有问题（编号 + 时间），加上带分类筛选的完整对话大纲面板。点击即可跳转到对话任何位置。
 
+- [zhengjy01/dsh-start](https://github.com/zhengjy01/dsh-start) —— macOS 上 DSH Web GUI 的一键启停启动器：前台/后台启动、停止、状态、防重复启动、自动打开浏览器，并可用脚本构建程序坞版 DSH.app。
 ## Skill
 
 _打包好的任务能力（基于 markdown 的 skill、工具包）。_

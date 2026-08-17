@@ -1569,6 +1569,7 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 - [rongyishuaige7/dsh-stats](https://github.com/rongyishuaige7/dsh-stats) — DeepSeek Harness (DSH) plugin: project-level token consumption, development timeline, and spend statistics dashboard.
 - [xccpddym/dsh-bubble-nav](https://github.com/xccpddym/dsh-bubble-nav) — Bubble navigation for DSH (DeepSeek Harness): a draggable accelerator ball listing all of your questions (numbered + timed), plus a full conversation outline panel with category filters. Click to jump anywhere in the conversation.
 
+- [zhengjy01/dsh-start](https://github.com/zhengjy01/dsh-start) — One-click start/stop launcher for the DSH Web GUI on macOS: foreground/daemon start, stop, status, duplicate-launch guard, auto browser open, plus a Dock-able DSH.app built by script.
 ## Skills
 
 _Packaged task capabilities (markdown-based skills, tool packs)._
