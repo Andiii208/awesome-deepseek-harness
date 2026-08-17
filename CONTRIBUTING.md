@@ -39,3 +39,35 @@ Anything that extends or works with **DeepSeek Harness**:
 ## Not sure which category?
 
 Open an issue and ask, or pick the closest fit — a maintainer can recategorize during review.
+
+## Automated checks
+
+Every PR that touches `README.md` / `README.zh-CN.md` runs an automated check.
+It only inspects the lines **you added** (existing rows are grandfathered in), and it verifies:
+
+| Check | What it requires |
+| --- | --- |
+| Format | `- [Name](https://link) — Concise one-line description.` |
+| Description | Non-empty (a trailing `` `⭐N` `` badge alone doesn't count) |
+| Link | Resolves — a `404` / `410` / unreachable URL fails the check |
+| Topic | GitHub repos must carry a `dsh` / `dsh-plugin` / `dsh-skill` / `deepseek-harness` topic |
+| Scope | The PR touches only the two README files |
+
+If something fails, the bot posts a comment listing exactly what to fix.
+Push a new commit to the same branch and the check re-runs automatically — no need to reopen the PR.
+
+### Branch protection
+
+`main` requires a pull request and a passing check, so please don't expect direct pushes to land.
+Two tips that avoid almost all merge friction:
+
+- **Leave "Allow edits by maintainers" enabled** on your PR, so a maintainer can fix a small conflict for you.
+- **Rebase before pushing** if the list has moved on:
+
+  ```bash
+  git remote add upstream https://github.com/Dominic789654/awesome-deepseek-harness.git
+  git fetch upstream && git rebase upstream/main
+  git push --force-with-lease
+  ```
+
+Keeping your diff to a **single added line** is the most reliable way to avoid conflicts entirely.
