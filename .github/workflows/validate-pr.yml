@@ -1,0 +1,158 @@
+name: Validate PR
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'README.md'
+      - 'README.zh-CN.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: validate-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout base
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch PR head
+        env:
+          PR_NUM: ${{ github.event.pull_request.number }}
+        run: |
+          git fetch origin "pull/${PR_NUM}/head:pr-head"
+          echo "BASE_SHA=$(git merge-base origin/${{ github.base_ref }} pr-head)" >> "$GITHUB_ENV"
+
+      - name: Check changed files scope
+        env:
+          BASE_SHA: ${{ env.BASE_SHA }}
+        run: |
+          changed=$(git diff --name-only "$BASE_SHA" pr-head)
+          echo "Changed files:"
+          echo "$changed"
+          bad=$(echo "$changed" | grep -v -E '^(README\.md|README\.zh-CN\.md)$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::This PR touches files outside the README list files:"
+            echo "$bad" | sed 's/^/  - /'
+            echo "::error::List submissions should only modify README.md and/or README.zh-CN.md."
+            exit 1
+          fi
+
+      - name: Validate new entries
+        id: validate
+        env:
+          BASE_SHA: ${{ env.BASE_SHA }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail
+
+          # Collect added lines that look like list entries
+          git diff --unified=0 "$BASE_SHA" pr-head -- README.md README.zh-CN.md \
+            | grep -E '^\+' | grep -v -E '^\+\+\+' | sed 's/^+//' > /tmp/added.txt || true
+
+          grep -E '^\s*-\s*\[' /tmp/added.txt > /tmp/entries.txt || true
+
+          added_count=$(wc -l < /tmp/entries.txt | tr -d ' ')
+          echo "Added entry lines: $added_count"
+
+          if [ "$added_count" = "0" ]; then
+            echo "No new list entries detected — nothing to validate."
+            echo "result=noentries" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          fail=0
+          : > /tmp/report.md
+
+          while IFS= read -r line; do
+            [ -z "$line" ] && continue
+            echo "::group::$line"
+
+            # --- format check: - [Name](url) — description.
+            if ! echo "$line" | grep -qE '^\s*-\s*\[[^]]+\]\(https?://[^)]+\)'; then
+              echo "::error::Bad entry format: $line"
+              echo "- ❌ **Format** — not \`- [Name](https://link) — description.\`: \`$(echo "$line" | head -c 120)\`" >> /tmp/report.md
+              fail=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            url=$(echo "$line" | sed -nE 's/.*\]\((https?:\/\/[^)]+)\).*/\1/p' | head -1)
+            desc=$(echo "$line" | sed -E 's/^\s*-\s*\[[^]]+\]\([^)]+\)//')
+
+            # --- description present
+            clean_desc=$(echo "$desc" | sed -E 's/`⭐[0-9]+`//g' | sed -E 's/[[:space:]—–-]//g')
+            if [ -z "$clean_desc" ]; then
+              echo "::error::Missing description: $line"
+              echo "- ❌ **Description** — entry has no description text: $url" >> /tmp/report.md
+              fail=1
+            fi
+
+            # --- link reachable
+            code=$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 25 \
+                    -H 'User-Agent: dsh-list-bot' "$url" 2>/dev/null || echo 000)
+            echo "HTTP $code for $url"
+            if [ "$code" = "404" ] || [ "$code" = "410" ] || [ "$code" = "000" ]; then
+              echo "::error::Link unreachable (HTTP $code): $url"
+              echo "- ❌ **Link** — unreachable (HTTP \`$code\`): $url" >> /tmp/report.md
+              fail=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            # --- GitHub repo: check dsh topic
+            if echo "$url" | grep -qE '^https?://github\.com/[^/]+/[^/]+/?$'; then
+              slug=$(echo "$url" | sed -E 's#^https?://github\.com/##; s#/$##')
+              topics=$(gh api "repos/$slug" --jq '.topics | join(",")' 2>/dev/null || echo "__ERR__")
+              if [ "$topics" = "__ERR__" ]; then
+                echo "::warning::Could not read topics for $slug"
+                echo "- ⚠️ **Topic** — could not read topics for \`$slug\` (private/renamed?)" >> /tmp/report.md
+              elif echo "$topics" | grep -qE '(^|,)(dsh|dsh-plugin|dsh-skill|deepseek-harness)(,|$)'; then
+                echo "dsh topic OK ($topics)"
+              else
+                echo "::warning::No dsh topic on $slug (topics: $topics)"
+                echo "- ⚠️ **Topic** — \`$slug\` has no \`dsh\` / \`deepseek-harness\` topic (found: \`${topics:-none}\`). Please add the \`dsh\` topic to your repo." >> /tmp/report.md
+                fail=1
+              fi
+            fi
+
+            echo "::endgroup::"
+          done < /tmp/entries.txt
+
+          if [ "$fail" != "0" ]; then
+            echo "result=fail" >> "$GITHUB_OUTPUT"
+          else
+            echo "result=pass" >> "$GITHUB_OUTPUT"
+          fi
+          exit "$fail"
+
+      - name: Comment findings
+        if: always() && steps.validate.outputs.result == 'fail'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUM: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          {
+            echo "🐋 **Automated list check found issues**"
+            echo
+            cat /tmp/report.md
+            echo
+            echo "<details><summary>How to fix</summary>"
+            echo
+            echo "- **Format:** \`- [Name](https://link) — Concise one-line description.\`"
+            echo "- **Topic:** your repo needs the \`dsh\` GitHub topic (Settings → About → Topics)."
+            echo "- **Scope:** only \`README.md\` / \`README.zh-CN.md\` should be touched."
+            echo "- Push a fix to the same branch and this check re-runs automatically."
+            echo
+            echo "</details>"
+          } > /tmp/comment.md
+          gh pr comment "$PR_NUM" --repo "$REPO" --body-file /tmp/comment.md
