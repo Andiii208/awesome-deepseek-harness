@@ -420,6 +420,7 @@ _Cross-session memory, checkpoints, pinning, and session navigation plugins._
 - [Scorp1o117/dsh-tdai-memory](https://github.com/Scorp1o117/dsh-tdai-memory) — Agent memory plugin for DeepSeek Harness.
 - [wonderfulcode1/dsh-checkpoint-diff](https://github.com/wonderfulcode1/dsh-checkpoint-diff) — File-diff visualization between checkpoint time nodes for DeepSeek Harness: read-only timeline + per-file line diff over dsh-checkpoint-rewind checkpoints, as a `/diff` command, JSON HTTP API, and GUI panel.
 - [Zh-U-hB/dsh-auto-compact](https://github.com/Zh-U-hB/dsh-auto-compact) — Automatic threshold-triggered compaction (default 256K) for every session and agent preset.
+- [Shiye-10Pages/dsh-memory-porter](https://github.com/Shiye-10Pages/dsh-memory-porter) — Cross-vendor memory migration into DSH: zero-token import of the `memories.json` in a Claude export, local Claude Code transcripts without an export, and conversations distilled through the model already configured in DSH, with verbatim evidence checked against the source by code.
 - [chenkezhen480/dsh-semantic-memory](https://github.com/chenkezhen480/dsh-semantic-memory) — Adds vectorized cross-session memory to DeepSeek Harness.
 - [tianhao8687/dsh-memoryos](https://github.com/tianhao8687/dsh-memoryos) — Evidence-first long-term project memory for DeepSeek Harness (DSH), powered by MemoryOS.
 - [tianhao8687/MemoryOS](https://github.com/tianhao8687/MemoryOS) — Local-first, evidence-first memory infrastructure for AI coding workflows.
