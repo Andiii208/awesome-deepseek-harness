@@ -1227,6 +1227,7 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 - [Laplace-bit/dsh-smooth-stream](https://github.com/Laplace-bit/dsh-smooth-stream) — Silky streaming reveal for the Web UI: text appears at the model's arrival rate, new lines glide in, no flicker; follow stays with the user and respects prefers-reduced-motion.
 - [Z-6354/dsh-mobile-hanui](https://github.com/Z-6354/dsh-mobile-hanui) — Mobile UI shell for the DSH Web GUI: turns the desktop three-column layout into a touch-friendly phone layout (overlay drawers, draggable FAB, full-screen dialogs, infinite-scroll history) under a 1024px viewport, with zero desktop impact.
 - [SpookySandwich/dsh-plugin-smooth-stream](https://github.com/SpookySandwich/dsh-plugin-smooth-stream) — Reveals assistant replies in fading paragraph batches instead of token-by-token, with smooth scroll-follow while streaming and a live summary line on thinking blocks; respects prefers-reduced-motion.
+- [FlashingChen/dsh-desktop-hub](https://github.com/FlashingChen/dsh-desktop-hub) — Electron desktop hub for the official DSH Web UI with a built-in MCP config converter (Claude Code / Cursor JSON → DSH YAML), Skills / Plugin management consoles, and a bundled Node.js + DSH runtime (no install, no terminal).
 
 ## Skills
 
