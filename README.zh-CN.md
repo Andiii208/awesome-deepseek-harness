@@ -276,8 +276,6 @@ _DeepSeek 原生 / DeepSeek 优先的 agent harness、coding agent，以及运�
 - [zhan-tz/dsh-plugin-runbook](https://github.com/zhan-tz/dsh-plugin-runbook) —— DSH 插件：Jupyter 式活体运行本——回合可回放的数据流 DAG，含 git 提交出处节点、子 agent 交接边、持久账本、悬停重跑与 LLM 解释。
 - [zhangjunjesse/dsh-claude-code](https://github.com/zhangjunjesse/dsh-claude-code) —— Claude Code 集成插件（上游无描述）。
 - [zjcdkj/dsh-plugins](https://github.com/zjcdkj/dsh-plugins) —— DeepSeek Harness (DSH) 插件集：qwen-image 让纯文本编码模型借千问 VL 读图，返回文本；纯 ESM，安装无需构建授权。
-- [BoringWuzhi/time_line_mind](https://github.com/BoringWuzhi/time_line_mind) —— DSH 插件：面向 DeepSeek Harness 的时间线 / 思维导图式任务与想法整理工具。
-- [zhangqijin890-bot/project-progress](https://github.com/zhangqijin890-bot/project-progress) —— DeepSeek Harness（DSH）插件：为每个项目自动创建进展记录、自动同步项目进展，当上下文满了开新会话时，新会话能快速了解项目进展、无缝接手。
 
 ## 安全与权限
 
@@ -606,7 +604,6 @@ _插件市场、安装管理器、索引与生态工具。_
 - [lazyaer/dsh-plugin-manager](https://github.com/lazyaer/dsh-plugin-manager) —— DSH Web 插件：在浏览器中启用/禁用已安装插件，并对每个插件的下载记录（来源与时间）进行审计。
 - [linhut/dsh-manager](https://github.com/linhut/dsh-manager) —— ⚡ DeepSeek Harness 安装与管理工具 —— 一键安装、插件市场、版本管理。
 - [skillre/dsh-wiki](https://github.com/skillre/dsh-wiki) —— DeepSeek Harness 的 wiki 插件（上游无描述）。
-- [daoxiang0520/dsh-plugin-whu](https://github.com/daoxiang0520/dsh-plugin-whu) —— DSH 插件（上游未提供描述）。
 - [ruimin251204/dsh-plugin-surgery](https://github.com/ruimin251204/dsh-plugin-surgery) —— DSH 插件（上游未提供描述）。
 - [FeatherHunter/dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) —— 🧠 MattSkills：Matt Pocock 的 25 个工程技能装好即用——wayfinder 决策地图、triage 分诊、grilling 拷问、handoff 交接，一条安装 Prompt 全装完。
 - [honghudavy-star/DSH_plugins_4U](https://github.com/honghudavy-star/DSH_plugins_4U) —— DSH 自建插件集合：微信桥接器 + GUI 微信入口补丁，一键安装。

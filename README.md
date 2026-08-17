@@ -277,8 +277,6 @@ _DeepSeek-native or DeepSeek-first agent harnesses / coding agents, plus runtime
 - [zhan-tz/dsh-plugin-runbook](https://github.com/zhan-tz/dsh-plugin-runbook) — DSH plugin: a Jupyter-style living runbook — replayable-turn dataflow DAG with git-commit provenance nodes, sub-agent handoff edges, a persistent ledger, hover re-run, and LLM explanations.
 - [zhangjunjesse/dsh-claude-code](https://github.com/zhangjunjesse/dsh-claude-code) — Claude Code integration plugin for DeepSeek Harness (no description provided upstream).
 - [zjcdkj/dsh-plugins](https://github.com/zjcdkj/dsh-plugins) — DeepSeek Harness (DSH) plugins: qwen-image gives a text-only coding model eyes via a Qwen-VL route through `ctx.llm`, returning text so DeepSeek keeps coding while Qwen looks. Pure ESM, no build permission at install.
-- [BoringWuzhi/time_line_mind](https://github.com/BoringWuzhi/time_line_mind) — DSH plugin for DeepSeek Harness: time-line / mind-mapping style task and thought organizer.
-- [zhangqijin890-bot/project-progress](https://github.com/zhangqijin890-bot/project-progress) — DeepSeek Harness (DSH) plugin: auto-creates and syncs a per-project progress record for every workspace, so a fresh session (after context runs out) can quickly pick up where the last one left off.
 
 ## Security & Permissions
 
@@ -610,7 +608,6 @@ _Plugin marketplaces, install managers, indexes, and ecosystem tooling._
 - [lazyaer/dsh-plugin-manager](https://github.com/lazyaer/dsh-plugin-manager) — DSH web plugin: enable/disable installed plugins from the browser, plus audit every plugin download (source & time).
 - [linhut/dsh-manager](https://github.com/linhut/dsh-manager) — ⚡ DeepSeek Harness install & management tool — one-click install, plugin marketplace, version management.
 - [skillre/dsh-wiki](https://github.com/skillre/dsh-wiki) — Wiki plugin for DeepSeek Harness (no description provided upstream).
-- [daoxiang0520/dsh-plugin-whu](https://github.com/daoxiang0520/dsh-plugin-whu) — DSH plugin (no description provided upstream).
 - [ruimin251204/dsh-plugin-surgery](https://github.com/ruimin251204/dsh-plugin-surgery) — DSH plugin (no description provided upstream).
 - [FeatherHunter/dsh-mattpocock-skills-deck](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck) — MattSkills: Matt Pocock's 25 engineering skills ready to install — wayfinder decision maps, triage, grilling, and handoff — all installed with one prompt.
 - [honghudavy-star/DSH_plugins_4U](https://github.com/honghudavy-star/DSH_plugins_4U) — Self-built DSH plugin collection: a WeChat bridge plus a GUI WeChat-entry patch, one-click install.
