@@ -1808,6 +1808,8 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 - [Ral6224/dsh-aseprite-skill](https://github.com/Ral6224/dsh-aseprite-skill) — A skill for dsh to enable agents to work with Aseprite.
 - [lusblead/dsh-Kingdom](https://github.com/lusblead/dsh-Kingdom) — Standalone dsh plugin: initializes/connects a local Kingdom inside DSH sessions (Phase 1+2 FROZEN, Claim != Fact governance closed loop).
 
+- [SongYuhui14/ai-security-assistant](https://github.com/SongYuhui14/ai-security-assistant) — AI 安全评估辅助技能：OWASP LLM Top 10 (2025) + 国内法规框架下的大模型/Agent/RAG 安全评估，含标准对照、攻击案例库、风险判定与报告生成工具链，附严格评测（30/30 通过，防技术失误与常识错误）。
+
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
