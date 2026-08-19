@@ -2277,8 +2277,6 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 
 - [SongYuhui14/dsh-code-vetter](https://github.com/SongYuhui14/dsh-code-vetter) — DSH plugin: AI code security reviewer — scan code for SQL/command injection, hardcoded secrets, dangerous functions, weak crypto, auth bypass (OWASP/CWE-aligned). AI 代码安全审查器。
 
-- [sandbaseai/sandbase-skills](https://github.com/sandbaseai/sandbase-skills) — 88 installable Agent Skills for research, social intelligence, marketing, and business workflows; its native DSH installer places source-verifiable skills in `.dsh/skills`, including multi-provider research with evidence provenance and confidence scoring.
-
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
