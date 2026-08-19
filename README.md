@@ -2138,6 +2138,7 @@ _Desktop, web, terminal, or editor front-ends for DSH._
 ## Skills
 
 _Packaged task capabilities (markdown-based skills, tool packs)._
+- [Andiii208/dsh-ultramath](https://github.com/Andiii208/dsh-ultramath) — Math-modeling contest agent workflow for DeepSeek Harness: an "UltraMath" master preset runs a problem from reading through framework, derivation, coding, verification, paper and review, plus 4 single-stage role presets (mathematician, engineer, writer, reviewer) and 33 model-library skill docs.
 - [sfeng49/ashare-agent](https://github.com/sfeng49/ashare-agent) — A-share (China A-stock) research and review workbench: AKShare data-fetching, daily morning report, and trade review skills, plus backtest and stock-screener scripts — analysis only, no trading.
 - [HiccupGeng/dsh-doc-skill](https://github.com/HiccupGeng/dsh-doc-skill) — 规范文档生成技能（源自 Claude Code /doc 命令）：在 docs/ 下生成 yyyy_MM_dd_HH_<文档名>.md 规范文档，7 类文档类型感知检查清单，纯 Markdown 零依赖复制即用。
 - [caoqinnan-web/organize-workspace-sessions](https://github.com/caoqinnan-web/organize-workspace-sessions) — Organize DeepSeek Harness workspace sessions: rename them as Category｜Topic via the host's local RPC (workspace.list / session.list / session.history / session.rename) and report archive/rename/judgment suggestions — no archiving, because DSH has no archive-view entry.
