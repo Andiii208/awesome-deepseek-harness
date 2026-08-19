@@ -2231,6 +2231,8 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 - [sa998aaron/deepseek-harness-matt-plugin](https://github.com/sa998aaron/deepseek-harness-matt-plugin) — DeepSeek Harness plugin bundling Matt Pocock's skill set plus a sidebar-visualized pipeline panel (Idea→Triage→Grill→Spec→Tickets→Implement→Review); send `/skill` into the conversation with one click.
 - [Viy1204/recruiting-copilot](https://github.com/Viy1204/recruiting-copilot) — AI recruiting workflow for HR/headhunters: job-standard grooming, dual-channel sourcing (Boss直聘 + 猎聘) and screening, market talent mapping, resume assessment, interview scheduling, candidate ledger, and daily reports. Installable as a Claude Code or DeepSeek Harness (dsh) plugin — the latter ships a ready-to-use "recruiting browser" panel — and also works alongside any AGENTS.md-reading AI coding assistant.
 
+- [SongYuhui14/dsh-plugin-conflict-advisor](https://github.com/SongYuhui14/dsh-plugin-conflict-advisor) — DSH plugin: detect conflicts among installed/enabled plugins (duplicate functionality, PromptSection collisions, complete-section clashes, dependency duplicates) and advise which to enable/disable. 插件冲突顾问。
+
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
