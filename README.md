@@ -2235,6 +2235,8 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 
 - [SongYuhui14/dsh-plugin-chooser](https://github.com/SongYuhui14/dsh-plugin-chooser) — DSH plugin: recommend plugins by multi-dimensional scoring (security/quality/activity/compat/ecosystem) to solve plugin choice paralysis. 插件评分选择顾问。
 
+- [SongYuhui14/dsh-plugin-compat-checker](https://github.com/SongYuhui14/dsh-plugin-compat-checker) — DSH plugin: pre-install compatibility testing — predict whether a new plugin will conflict with or crash existing plugins (slot/prompt-section/dependency/version clashes). 插件兼容性测试器。
+
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
