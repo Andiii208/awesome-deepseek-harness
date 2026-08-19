@@ -43,8 +43,27 @@ jobs:
             echo "Skipping list-entry validation (nothing to check)."
           fi
 
+          # Does this PR add/remove any curated list ENTRY lines ("- [Name](url) — desc")?
+          # Infrastructure PRs (CI, scripts, assets) often edit prose or embeds in the
+          # README without touching a single entry. Those must not be forced through the
+          # entry-scope guard, which would make them permanently unmergeable -- the same
+          # class of deadlock that the `paths:` filter note above warns about.
+          if git diff --unified=0 "$base_sha" pr-head -- README.md README.zh-CN.md \
+               | grep -E '^[+-]' | grep -v -E '^(\+\+\+|---)' \
+               | sed -E 's/^[+-]//' | grep -qE '^\s*-\s*\['; then
+            echo "TOUCHES_ENTRIES=true" >> "$GITHUB_ENV"
+          else
+            echo "TOUCHES_ENTRIES=false" >> "$GITHUB_ENV"
+            echo "No curated list entry lines were added or removed."
+            echo "Treating this as an infrastructure/docs PR: file-scope guard relaxed."
+          fi
+
+      # Only list submissions are held to "README files only". A PR that edits the
+      # README without changing any entry line is infrastructure (CI, scripts, assets,
+      # prose) and is allowed to touch other paths; its entries are still validated by
+      # the next step if it happens to add any.
       - name: Check changed files scope
-        if: env.IS_LIST_PR == 'true'
+        if: env.IS_LIST_PR == 'true' && env.TOUCHES_ENTRIES == 'true'
         env:
           BASE_SHA: ${{ env.BASE_SHA }}
         run: |
@@ -53,9 +72,10 @@ jobs:
           echo "$changed"
           bad=$(echo "$changed" | grep -v -E '^(README\.md|README\.zh-CN\.md)$' || true)
           if [ -n "$bad" ]; then
-            echo "::error::This PR touches files outside the README list files:"
+            echo "::error::This PR changes curated list entries and also touches files outside the README list files:"
             echo "$bad" | sed 's/^/  - /'
             echo "::error::List submissions should only modify README.md and/or README.zh-CN.md."
+            echo "::error::Split infrastructure changes into a separate PR that adds no list entries."
             exit 1
           fi
 
