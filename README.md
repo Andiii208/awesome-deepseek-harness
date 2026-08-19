@@ -2277,6 +2277,8 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 
 - [SongYuhui14/dsh-code-vetter](https://github.com/SongYuhui14/dsh-code-vetter) — DSH plugin: AI code security reviewer — scan code for SQL/command injection, hardcoded secrets, dangerous functions, weak crypto, auth bypass (OWASP/CWE-aligned). AI 代码安全审查器。
 
+- [SongYuhui14/dsh-publisher](https://github.com/SongYuhui14/dsh-publisher) — DSH plugin: one-click publish planner for skills/plugins — validate project completeness, generate repo description, awesome-list entry, and PR commands. 技能/插件一键发布助手。
+
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
