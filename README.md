@@ -2239,6 +2239,8 @@ _Packaged task capabilities (markdown-based skills, tool packs)._
 
 - [SongYuhui14/dsh-plugin-compat-checker](https://github.com/SongYuhui14/dsh-plugin-compat-checker) — DSH plugin: pre-install compatibility testing — predict whether a new plugin will conflict with or crash existing plugins (slot/prompt-section/dependency/version clashes). 插件兼容性测试器。
 
+- [SongYuhui14/dsh-code-vetter](https://github.com/SongYuhui14/dsh-code-vetter) — DSH plugin: AI code security reviewer — scan code for SQL/command injection, hardcoded secrets, dangerous functions, weak crypto, auth bypass (OWASP/CWE-aligned). AI 代码安全审查器。
+
 ## Resources
 
 - [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) — Official source repo.  `⭐38238`
